@@ -1,0 +1,10 @@
+package org.apache.spring.dubbo.consumer.application.commons.dto;
+
+import lombok.Data;
+
+@Data
+public class LoginDTO {
+
+    private String email;
+    private String password;
+}
