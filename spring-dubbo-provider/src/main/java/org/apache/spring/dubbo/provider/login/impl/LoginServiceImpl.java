@@ -27,7 +27,7 @@ public class LoginServiceImpl implements LoginService {
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-                .url("http://localhost:3000/users?select=email,password&email=eq."+ email +"&password=eq." + password)
+                .url("http://localhost:8090/users?select=email,password&email=eq."+ email +"&password=eq." + password)
                 .get()
                 .build();
         try (Response response = client.newCall(request).execute()) {

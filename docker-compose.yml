@@ -6,3 +6,19 @@ services:
       - "2181:2181"
       - "2888:2888"
       - "3888:3888"
+  prometheus:
+    image: prom/prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_DATASOURCES_DEFAULT_NAME=prometheus
+      - GF_DATASOURCES_DEFAULT_URL=http://prometheus:9090
+      - GF_DATASOURCES_DEFAULT_ACCESS=proxy
