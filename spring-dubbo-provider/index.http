@@ -1,0 +1,5 @@
+### test PostgREST endpoint
+GET http://localhost:3000/users
+
+### test get specific user
+GET http://localhost:3000/users?email=eq.admin@email.com

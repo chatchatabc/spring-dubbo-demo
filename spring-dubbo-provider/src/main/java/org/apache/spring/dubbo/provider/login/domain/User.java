@@ -1,5 +1,6 @@
-package org.apache.spring.dubbo.provider.domain.model;
+package org.apache.spring.dubbo.provider.login.domain;
 
+import com.google.gson.annotations.Expose;
 import lombok.Data;
 
 import java.time.LocalDate;
@@ -13,8 +14,5 @@ public class User {
 
     private String email;
 
-    private List<String> roles;
-    private LocalDate dateCreated;
-    private LocalDate lastLogin;
 
 }

@@ -1,4 +1,4 @@
-package org.apache.spring.dubbo.consumer.application.commons.dto;
+package org.apache.spring.dubbo.consumer.login;
 
 import lombok.Data;
 

@@ -12,7 +12,7 @@ CREATE TABLE if not exists users
     lastLogin timestamp
 );
 
---changeset liquibase:2c
+--changeset liquibase:2
 INSERT INTO users
 (id,
  username,
@@ -28,4 +28,4 @@ VALUES(
           'admin@email.com',
           localtimestamp,
           localtimestamp
-      )
+      );
