@@ -14,12 +14,12 @@ public class LoginController {
     @DubboReference
     private LoginService loginService;
 
-    @GetMapping("/login")
+    @GetMapping("/")
     public String login(){
         return "login";
     }
 
-    @PostMapping("/login")
+    @PostMapping("/")
     public String getByEmail(@ModelAttribute LoginDTO loginDTO) throws IOException {
 //        System.out.println(loginDTO.getEmail());
 //        System.out.println(loginDTO.getPassword());
