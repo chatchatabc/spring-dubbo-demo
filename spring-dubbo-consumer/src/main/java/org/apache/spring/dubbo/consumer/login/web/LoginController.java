@@ -1,7 +1,8 @@
-package org.apache.spring.dubbo.consumer.login;
+package org.apache.spring.dubbo.consumer.login.web;
 
 import org.apache.dubbo.config.annotation.DubboReference;
-import org.apache.spring.dubbo.inter.login.LoginService;
+import org.apache.spring.dubbo.consumer.login.commons.dto.LoginDTO;
+import org.apache.spring.dubbo.inter.login.api.LoginService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +13,7 @@ import java.io.IOException;
 public class LoginController {
 
     @DubboReference
-    private LoginService loginService;
+    LoginService loginService;
 
     @GetMapping("/")
     public String login(){
@@ -21,12 +22,9 @@ public class LoginController {
 
     @PostMapping("/")
     public String getByEmail(@ModelAttribute LoginDTO loginDTO) throws IOException {
-//        System.out.println(loginDTO.getEmail());
-//        System.out.println(loginDTO.getPassword());
-//        return "login";
         Boolean user = loginService.getByEmail(loginDTO.getEmail(), loginDTO.getPassword());
         try {
-            if (user == true) {
+            if (user) {
                 return "homepage";
             } else {
                 return "error";

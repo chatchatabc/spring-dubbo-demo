@@ -5,9 +5,8 @@ import com.google.gson.reflect.TypeToken;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import okhttp3.ResponseBody;
 import org.apache.dubbo.config.annotation.DubboService;
-import org.apache.spring.dubbo.inter.login.LoginService;
+import org.apache.spring.dubbo.inter.login.api.LoginService;
 import org.apache.spring.dubbo.provider.login.domain.User;
 import org.springframework.stereotype.Service;
 
@@ -20,9 +19,6 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public Boolean getByEmail(String email, String password) throws IOException {
-//        System.out.println(email);
-//        System.out.println(password);
-//        return true;
 
         OkHttpClient client = new OkHttpClient();
 
@@ -34,15 +30,12 @@ public class LoginServiceImpl implements LoginService {
             if (!response.isSuccessful()) {
                 throw new IOException("Unexpected code " + response);
             }
+            assert response.body() != null;
             String json = response.body().string();
             Gson gson = new Gson();
             List<User> users = gson.fromJson(json, new TypeToken<List<User>>() {
             }.getType());
-            if (users.size() == 1) {
-                return true;
-            } else {
-                return false;
-            }
+            return users.size() == 1;
         }
     }
 }

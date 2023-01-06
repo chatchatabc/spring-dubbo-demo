@@ -1,7 +1,7 @@
 # Spring Dubbo Demo
 
 Basic web app built with spring and dubbo RPC protocol to communicate with separate modules and zookeeper to host services to simulate cloud computing.
-Postgresql is used as the database but with postgREST web service to deliver data in JSON format or RESTful API.
+Postgresql is used as the database but with postgREST web service to deliver data in JSON format or RESTful API. The app also has metrics and logging.
 
 ## Requirements
 
@@ -18,6 +18,8 @@ Postgresql is used as the database but with postgREST web service to deliver dat
 
 * Login page
 * Registration page
+* Prometheus (metrics scraper and storage)
+* Grafana (metrics data monitoring and presenting)
 * Will add more in the future
 
 ## Getting Started
@@ -37,7 +39,7 @@ Postgresql is used as the database but with postgREST web service to deliver dat
    ```sh
        postgrest postgrest.conf
    ```
-6. Build then run the application (start with the provider module then consumer module)
+6. Run the application (start with the provider module then consumer module)
 
 ## Issues
 
@@ -53,3 +55,5 @@ Postgresql is used as the database but with postgREST web service to deliver dat
 - https://www.amazingcto.com/postgres-for-everything/
 - https://dubbo.apache.org/docs/v2.7/user/quick-start/
 - https://postgrest.org/en/stable/tutorials/tut0.html
+- https://prometheus.io/docs/prometheus/latest/querying/api/
+- https://grafana.com/
