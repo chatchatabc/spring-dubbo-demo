@@ -1,0 +1,14 @@
+[[module]]
+name = "spring-dubbo-consumer"
+path = "./spring-dubbo-consumer"
+build = {command = "make build", args = ["SPRING_DUBBO_CONSUMER_BUILD_ARG"]}
+
+[[module]]
+name = "spring-dubbo-interface"
+path = "./spring-dubbo-interface"
+build = {command = "make build", args = ["SPRING_DUBBO_INTERFACE_BUILD_ARG"]}
+
+[[module]]
+name = "spring-dubbo-provider"
+path = "./spring-dubbo-provider"
+build = {command = "make build", args = ["SPRING_DUBBO_PROVIDER_BUILD_ARG"]}

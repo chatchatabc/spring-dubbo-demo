@@ -113,6 +113,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>org.apache.spring.dubbo.provider.SpringDubboProviderApplication</mainClass>
+                </configuration>
                 <version>${spring-boot.version}</version>
                 <executions>
                     <execution>

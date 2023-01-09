@@ -1,18 +1,18 @@
 package org.apache.spring.dubbo.consumer.login.web;
 
 import org.apache.dubbo.config.annotation.DubboReference;
-import org.apache.spring.dubbo.consumer.login.commons.dto.LoginDTO;
+import org.apache.spring.dubbo.consumer.commons.dto.UserDTO;
 import org.apache.spring.dubbo.consumer.util.error.AppErrorFactory;
 import org.apache.spring.dubbo.consumer.util.error.AppErrorLogger;
 import org.apache.spring.dubbo.inter.login.api.LoginService;
 import org.springframework.stereotype.Controller;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
+
 
 import java.io.IOException;
 
 
+@SuppressWarnings("PlaceholderCountMatchesArgumentCount")
 @Controller
 public class LoginController {
 
@@ -20,7 +20,6 @@ public class LoginController {
     LoginService loginService;
 
     private static final AppErrorLogger log = AppErrorFactory.getLogger(LoginController.class);
-    private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
     @GetMapping("/")
     public String login(){
@@ -28,13 +27,13 @@ public class LoginController {
     }
 
     @PostMapping("/")
-    public String getByEmail(@ModelAttribute LoginDTO loginDTO) throws IOException {
-        Boolean user = loginService.getByEmail(loginDTO.getEmail(), loginDTO.getPassword());
+    public String getByEmail(@ModelAttribute UserDTO userDTO) throws IOException {
+        Boolean user = loginService.getByEmail(userDTO.getEmail(), userDTO.getPassword());
         try {
             if (user) {
                 return "homepage";
             } else {
-                log.error("APP-100-300", loginDTO.getEmail());
+                log.error("APP-100-300", userDTO.getEmail());
                 return "error";
             }
         } catch (Exception e) {

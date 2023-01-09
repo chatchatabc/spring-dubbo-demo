@@ -1,9 +1,9 @@
-package org.apache.spring.dubbo.consumer.login.commons.dto;
+package org.apache.spring.dubbo.consumer.commons.dto;
 
 import lombok.Data;
 
 @Data
-public class LoginDTO {
+public class UserDTO {
 
     private String email;
     private String password;
