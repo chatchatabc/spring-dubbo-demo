@@ -1,4 +1,4 @@
-package org.apache.spring.dubbo.provider.login.impl;
+package org.apache.spring.dubbo.provider.impl.login;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -7,7 +7,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.apache.spring.dubbo.inter.login.api.LoginService;
-import org.apache.spring.dubbo.provider.login.domain.User;
+import org.apache.spring.dubbo.provider.domain.User;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;

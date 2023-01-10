@@ -16,3 +16,295 @@
 2023-01-06 18:16:16.786  INFO 7580 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
 2023-01-06 18:16:16.807  INFO 7580 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
 2023-01-06 18:16:17.467  INFO 7580 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 3.265 seconds (JVM running for 3.973)
+2023-01-10 13:47:39.154  INFO 19800 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 19800 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 13:47:39.162  INFO 19800 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 13:47:41.038  INFO 19800 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 13:47:41.576  INFO 19800 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 13:47:41.616  INFO 19800 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 13:47:43.414  INFO 19800 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 53191
+2023-01-10 13:47:43.492  INFO 19800 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 13:47:43.544  INFO 19800 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 13:47:44.726  INFO 19800 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 6.378 seconds (JVM running for 7.814)
+2023-01-10 14:35:24.738  INFO 15904 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 15904 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 14:35:24.745  INFO 15904 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 14:35:26.050  INFO 15904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-10 14:35:26.067  INFO 15904 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 JPA repository interfaces.
+2023-01-10 14:35:26.585  INFO 15904 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 14:35:27.258  INFO 15904 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 14:35:27.305  INFO 15904 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 14:35:29.777  INFO 15904 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 14:35:30.776  INFO 15904 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 58777
+2023-01-10 14:35:30.841  INFO 15904 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 14:35:30.872  INFO 15904 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 14:35:31.800  INFO 15904 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 7.696 seconds (JVM running for 8.507)
+2023-01-10 15:39:24.263  INFO 15904 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-10 15:40:06.313  INFO 24608 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 24608 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 15:40:06.316  INFO 24608 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 15:40:07.858  INFO 24608 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 15:40:08.346  INFO 24608 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 15:40:08.380  INFO 24608 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 15:40:09.714  INFO 24608 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 53449
+2023-01-10 15:40:09.793  INFO 24608 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 15:40:09.824  INFO 24608 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 15:40:10.744  INFO 24608 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.843 seconds (JVM running for 5.626)
+2023-01-10 15:44:15.972  INFO 17876 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 17876 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 15:44:15.976  INFO 17876 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 15:44:17.413  INFO 17876 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 15:44:17.872  INFO 17876 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 15:44:17.899  INFO 17876 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 15:44:19.283  INFO 17876 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 55546
+2023-01-10 15:44:19.353  INFO 17876 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 15:44:19.390  INFO 17876 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 15:44:20.284  INFO 17876 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.798 seconds (JVM running for 5.5)
+2023-01-10 15:55:41.384  INFO 22804 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 22804 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 15:55:41.387  INFO 22804 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 15:55:42.873  INFO 22804 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 15:55:43.383  INFO 22804 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 15:55:43.416  INFO 22804 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 15:55:44.724  INFO 22804 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 65215
+2023-01-10 15:55:44.832  INFO 22804 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 15:55:44.865  INFO 22804 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 15:55:45.642  INFO 22804 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.704 seconds (JVM running for 5.664)
+2023-01-10 16:11:12.747  INFO 20920 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 20920 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 16:11:12.751  INFO 20920 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 16:11:14.499  INFO 20920 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 16:11:15.046  INFO 20920 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 16:11:15.083  INFO 20920 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 16:11:16.455  INFO 20920 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 64847
+2023-01-10 16:11:16.527  INFO 20920 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 16:11:16.567  INFO 20920 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 16:11:17.559  INFO 20920 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 5.286 seconds (JVM running for 6.227)
+2023-01-10 16:14:21.955  INFO 19600 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 19600 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 16:14:21.959  INFO 19600 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 16:14:23.316  INFO 19600 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 16:14:23.769  INFO 19600 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 16:14:23.797  INFO 19600 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 16:14:25.127  INFO 19600 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 49671
+2023-01-10 16:14:25.181  INFO 19600 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 16:14:25.213  INFO 19600 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 16:14:26.139  INFO 19600 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.659 seconds (JVM running for 5.405)
+2023-01-10 16:18:09.048  INFO 14456 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 14456 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 16:18:09.052  INFO 14456 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 16:18:10.553  INFO 14456 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 16:18:10.965  INFO 14456 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 16:18:11.029  INFO 14456 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 16:18:12.400  INFO 14456 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 52049
+2023-01-10 16:18:12.472  INFO 14456 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 16:18:12.521  INFO 14456 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 16:18:13.457  INFO 14456 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.892 seconds (JVM running for 5.652)
+2023-01-10 16:20:17.634  INFO 17892 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 17892 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 16:20:17.637  INFO 17892 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 16:20:19.255  INFO 17892 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 16:20:19.727  INFO 17892 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 16:20:19.770  INFO 17892 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 16:20:21.090  INFO 17892 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 51492
+2023-01-10 16:20:21.152  INFO 17892 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 16:20:21.190  INFO 17892 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 16:20:22.065  INFO 17892 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.914 seconds (JVM running for 5.7)
+2023-01-10 16:20:37.231  INFO 22852 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 22852 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 16:20:37.235  INFO 22852 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 16:20:38.645  INFO 22852 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 16:20:39.065  INFO 22852 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 16:20:39.125  INFO 22852 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 16:20:40.505  INFO 22852 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 50687
+2023-01-10 16:20:40.581  INFO 22852 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 16:20:40.615  INFO 22852 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 16:20:41.615  INFO 22852 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.866 seconds (JVM running for 5.733)
+2023-01-10 16:26:16.507  INFO 18160 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 18160 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 16:26:16.509  INFO 18160 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 16:26:17.984  INFO 18160 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 16:26:18.449  INFO 18160 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 16:26:18.520  INFO 18160 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 16:26:19.828  INFO 18160 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 50590
+2023-01-10 16:26:19.912  INFO 18160 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 16:26:19.951  INFO 18160 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 16:26:20.896  INFO 18160 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.887 seconds (JVM running for 5.629)
+2023-01-10 16:28:31.058  INFO 8300 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 8300 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 16:28:31.061  INFO 8300 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 16:28:32.566  INFO 8300 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 16:28:33.008  INFO 8300 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 16:28:33.063  INFO 8300 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 16:28:34.369  INFO 8300 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 49832
+2023-01-10 16:28:34.442  INFO 8300 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 16:28:34.467  INFO 8300 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 16:28:35.597  INFO 8300 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 5.041 seconds (JVM running for 5.725)
+2023-01-10 16:32:34.228  INFO 14564 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 14564 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 16:32:34.231  INFO 14564 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 16:32:35.674  INFO 14564 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 16:32:36.167  INFO 14564 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 16:32:36.217  INFO 14564 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 16:32:37.527  INFO 14564 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 56026
+2023-01-10 16:32:37.583  INFO 14564 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 16:32:37.614  INFO 14564 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 16:32:38.584  INFO 14564 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.839 seconds (JVM running for 5.544)
+2023-01-10 16:36:47.146  INFO 18668 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 18668 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 16:36:47.148  INFO 18668 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 16:36:48.588  INFO 18668 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 16:36:49.043  INFO 18668 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 16:36:49.093  INFO 18668 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 16:36:50.441  INFO 18668 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 62767
+2023-01-10 16:36:50.495  INFO 18668 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 16:36:50.526  INFO 18668 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 16:36:51.470  INFO 18668 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.772 seconds (JVM running for 5.526)
+2023-01-10 17:04:12.792  INFO 19304 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 19304 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 17:04:12.795  INFO 19304 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 17:04:14.247  INFO 19304 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 17:04:14.686  INFO 19304 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 17:04:14.777  INFO 19304 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 17:04:16.197  INFO 19304 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 62872
+2023-01-10 17:04:16.284  INFO 19304 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 17:04:16.320  INFO 19304 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 17:04:17.228  INFO 19304 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.95 seconds (JVM running for 5.68)
+2023-01-10 17:09:25.779  INFO 23228 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 23228 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 17:09:25.782  INFO 23228 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 17:09:27.363  INFO 23228 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 17:09:27.802  INFO 23228 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 17:09:27.865  INFO 23228 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 17:09:29.172  INFO 23228 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 59752
+2023-01-10 17:09:29.228  INFO 23228 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 17:09:29.277  INFO 23228 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 17:09:30.235  INFO 23228 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.932 seconds (JVM running for 5.757)
+2023-01-10 17:18:07.920  INFO 5724 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 5724 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 17:18:07.923  INFO 5724 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 17:18:09.349  INFO 5724 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 17:18:09.841  INFO 5724 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 17:18:09.878  INFO 5724 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 17:18:11.158  INFO 5724 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 63684
+2023-01-10 17:18:11.215  INFO 5724 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 17:18:11.253  INFO 5724 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 17:18:12.188  INFO 5724 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.714 seconds (JVM running for 5.488)
+2023-01-10 17:21:53.429  INFO 9708 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 9708 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 17:21:53.432  INFO 9708 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 17:21:55.068  INFO 9708 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 17:21:55.502  INFO 9708 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 17:21:55.569  INFO 9708 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 17:21:56.920  INFO 9708 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 60994
+2023-01-10 17:21:56.984  INFO 9708 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 17:21:57.030  INFO 9708 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 17:21:57.950  INFO 9708 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.974 seconds (JVM running for 5.716)
+2023-01-10 17:27:05.281  INFO 24604 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 24604 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 17:27:05.283  INFO 24604 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 17:27:06.722  INFO 24604 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 17:27:07.204  INFO 24604 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 17:27:07.243  INFO 24604 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 17:27:08.557  INFO 24604 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 54555
+2023-01-10 17:27:08.615  INFO 24604 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 17:27:08.662  INFO 24604 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 17:27:09.596  INFO 24604 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.792 seconds (JVM running for 5.507)
+2023-01-10 17:28:49.819  INFO 26064 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 26064 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 17:28:49.823  INFO 26064 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 17:28:51.224  INFO 26064 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 17:28:51.651  INFO 26064 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 17:28:51.701  INFO 26064 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 17:28:53.043  INFO 26064 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 64388
+2023-01-10 17:28:53.116  INFO 26064 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 17:28:53.150  INFO 26064 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 17:28:54.004  INFO 26064 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.638 seconds (JVM running for 5.391)
+2023-01-10 17:36:52.023  INFO 24340 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 24340 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 17:36:52.031  INFO 24340 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 17:36:53.573  INFO 24340 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 17:36:53.994  INFO 24340 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 17:36:54.046  INFO 24340 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 17:36:55.375  INFO 24340 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 50071
+2023-01-10 17:36:55.434  INFO 24340 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 17:36:55.465  INFO 24340 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 17:36:56.485  INFO 24340 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.834 seconds (JVM running for 5.696)
+2023-01-10 17:41:06.214  INFO 23964 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 23964 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 17:41:06.218  INFO 23964 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 17:41:07.641  INFO 23964 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 17:41:08.077  INFO 23964 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 17:41:08.118  INFO 23964 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 17:41:09.457  INFO 23964 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 58460
+2023-01-10 17:41:09.512  INFO 23964 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 17:41:09.548  INFO 23964 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 17:41:10.581  INFO 23964 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.799 seconds (JVM running for 5.577)
+2023-01-10 17:45:32.735  INFO 26212 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 26212 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 17:45:32.738  INFO 26212 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 17:45:34.247  INFO 26212 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 17:45:34.722  INFO 26212 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 17:45:34.771  INFO 26212 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 17:45:36.136  INFO 26212 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 51512
+2023-01-10 17:45:36.191  INFO 26212 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 17:45:36.222  INFO 26212 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 17:45:37.094  INFO 26212 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.875 seconds (JVM running for 5.55)
+2023-01-10 17:57:05.313  INFO 23216 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 23216 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 17:57:05.323  INFO 23216 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 17:57:06.843  INFO 23216 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 17:57:07.291  INFO 23216 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 17:57:07.344  INFO 23216 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 17:57:08.677  INFO 23216 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 51973
+2023-01-10 17:57:08.738  INFO 23216 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 17:57:08.769  INFO 23216 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 17:57:09.633  INFO 23216 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.781 seconds (JVM running for 5.471)
+2023-01-10 17:58:14.270  INFO 24844 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 24844 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 17:58:14.273  INFO 24844 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 17:58:15.682  INFO 24844 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 17:58:16.110  INFO 24844 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 17:58:16.156  INFO 24844 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 17:58:17.409  INFO 24844 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 57449
+2023-01-10 17:58:17.472  INFO 24844 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 17:58:17.505  INFO 24844 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 17:58:18.490  INFO 24844 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 4.681 seconds (JVM running for 5.401)
+2023-01-10 18:01:11.413  INFO 9440 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 9440 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 18:01:11.418  INFO 9440 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 18:01:12.978  INFO 9440 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 18:01:13.424  INFO 9440 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 18:01:13.498  INFO 9440 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 18:01:14.844  INFO 9440 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 59898
+2023-01-10 18:01:14.928  INFO 9440 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 18:01:14.956  INFO 9440 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 18:01:15.959  INFO 9440 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 5.04 seconds (JVM running for 5.728)
+2023-01-10 18:07:07.503  INFO 6656 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 6656 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 18:07:07.509  INFO 6656 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 18:07:09.911  INFO 6656 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 18:07:10.686  INFO 6656 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 18:07:10.747  INFO 6656 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 18:07:12.894  INFO 6656 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 56501
+2023-01-10 18:07:12.977  INFO 6656 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 18:07:13.027  INFO 6656 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 18:07:14.183  INFO 6656 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 7.439 seconds (JVM running for 9.055)
+2023-01-10 18:17:59.906  INFO 24772 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 24772 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 18:17:59.909  INFO 24772 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 18:18:00.741  INFO 24772 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 18:18:01.036  INFO 24772 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 18:18:01.066  INFO 24772 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 18:18:01.910  INFO 24772 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 56387
+2023-01-10 18:18:01.964  INFO 24772 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 18:18:01.990  INFO 24772 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 18:18:02.542  INFO 24772 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 2.954 seconds (JVM running for 3.46)
+2023-01-10 18:18:38.038  INFO 13672 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 13672 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 18:18:38.041  INFO 13672 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 18:18:38.967  INFO 13672 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 18:18:39.259  INFO 13672 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 18:18:39.285  INFO 13672 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 18:18:40.131  INFO 13672 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 55783
+2023-01-10 18:18:40.172  INFO 13672 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 18:18:40.193  INFO 13672 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 18:18:40.697  INFO 13672 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 2.974 seconds (JVM running for 3.53)
+2023-01-10 18:20:19.042  INFO 22932 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 22932 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 18:20:19.044  INFO 22932 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 18:20:19.910  INFO 22932 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 18:20:20.189  INFO 22932 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 18:20:20.214  INFO 22932 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 18:20:21.073  INFO 22932 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 56416
+2023-01-10 18:20:21.110  INFO 22932 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 18:20:21.131  INFO 22932 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 18:20:21.670  INFO 22932 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 2.926 seconds (JVM running for 3.464)
+2023-01-10 18:22:48.463  INFO 23736 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 23736 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 18:22:48.467  INFO 23736 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 18:22:49.388  INFO 23736 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 18:22:49.705  INFO 23736 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 18:22:49.728  INFO 23736 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 18:22:50.581  INFO 23736 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 49702
+2023-01-10 18:22:50.621  INFO 23736 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 18:22:50.644  INFO 23736 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 18:22:51.167  INFO 23736 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 3.034 seconds (JVM running for 3.588)
+2023-01-10 18:26:58.308  INFO 25960 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 25960 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 18:26:58.311  INFO 25960 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 18:26:59.230  INFO 25960 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 18:26:59.498  INFO 25960 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 18:26:59.525  INFO 25960 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 18:27:00.388  INFO 25960 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 56130
+2023-01-10 18:27:00.425  INFO 25960 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 18:27:00.445  INFO 25960 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 18:27:01.009  INFO 25960 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 3.013 seconds (JVM running for 3.578)

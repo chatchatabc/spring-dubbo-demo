@@ -3,3 +3,10 @@ GET http://localhost:3000/users
 
 ### test get specific user
 GET http://localhost:3000/users?email=eq.admin@email.com
+
+
+### post
+POST http://localhost:8090/users
+Content-Type:application/json
+
+{"username":"josh","password":"123","email":"josh@email.com","dateat":"2023:01:10: 18::08::23","lastlogin":"2023:01:10: 18::08::23"}

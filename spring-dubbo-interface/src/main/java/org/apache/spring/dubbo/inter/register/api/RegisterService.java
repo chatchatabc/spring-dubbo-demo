@@ -1,6 +1,8 @@
 package org.apache.spring.dubbo.inter.register.api;
 
+import java.io.IOException;
+
 public interface RegisterService {
 
-    Integer insertUser(String email, String password);
+    String insertUser( String username ,String email ,String password) throws IOException;
 }
