@@ -4,7 +4,7 @@ import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.spring.dubbo.consumer.commons.dto.UserDTO;
 import org.apache.spring.dubbo.consumer.util.error.AppErrorFactory;
 import org.apache.spring.dubbo.consumer.util.error.AppErrorLogger;
-import org.apache.spring.dubbo.inter.login.api.LoginService;
+import org.apache.spring.dubbo.inter.user.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,7 +17,7 @@ import java.io.IOException;
 public class LoginController {
 
     @DubboReference
-    LoginService loginService;
+    UserService userService;
 
     private static final AppErrorLogger log = AppErrorFactory.getLogger(LoginController.class);
 
@@ -27,9 +27,9 @@ public class LoginController {
     }
 
     @PostMapping("/")
-    public String getByEmail(@ModelAttribute UserDTO userDTO) throws IOException {
+    public String authUser(@ModelAttribute UserDTO userDTO) throws IOException {
 
-        Boolean user = loginService.getByEmail(userDTO.getEmail(), userDTO.getPassword());
+        Boolean user = userService.findByEmail(userDTO.getEmail(), userDTO.getPassword());
         try {
             if (user) {
                 return "homepage";

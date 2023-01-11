@@ -1,4 +1,4 @@
-package org.apache.spring.dubbo.provider.domain;
+package org.apache.spring.dubbo.provider.domain.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 import lombok.Data;

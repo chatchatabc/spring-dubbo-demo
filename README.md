@@ -3,18 +3,18 @@
 Basic web app built with spring and dubbo RPC protocol to communicate with separate modules and zookeeper to host services to simulate cloud computing.
 Postgresql is used as the database but with postgREST web service to deliver data in JSON format or RESTful API. The app also has metrics and logging.
 
-## Requirements
+# Requirements
 
 - [Docker](https://docs.docker.com/get-docker/)
 - [Postgresql (v15.0)](https://www.postgresql.org/download/)
-- [PostgREST (v10.1.1)](https://github.com/PostgREST/postgrest/releases/download/v10.1.1/postgrest-v10.1.1-windows-x64.zip)
+- [PostgREST (v10.1.1)](https://github.com/PostgREST/postgrest/releases/tag/v10.1.1)
 - [Intellij (EAP) *preferred*](https://www.jetbrains.com/toolbox-app/)
 - [Spring Boot (v2.7.6)](https://spring.io/quickstart)
 - [Maven](https://maven.apache.org/index.html)
 - [Java SDK (v17.0.5)](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
 - [Github](https://git-scm.com/downloads)
 
-## Features
+# Features
 
 * Login page
 * Registration page
@@ -22,7 +22,7 @@ Postgresql is used as the database but with postgREST web service to deliver dat
 * Grafana (metrics data monitoring and presenting)
 * Will add more in the future
 
-## Getting Started
+# Getting Started
 
 1. Download and install Docker, Postgresql, Java with their appropriate versions.
 2. After installing PostgREST, run on terminal/shell
@@ -41,19 +41,19 @@ Postgresql is used as the database but with postgREST web service to deliver dat
    ```
 6. Run the application (start with the provider module then consumer module)
 
-## Issues
+# Issues
 
 - None as of the moment
 
-## References
-- https://www.baeldung.com/thymeleaf-in-spring-mvc
-- https://www.baeldung.com/security-none-filters-none-access-permitAll
-- https://www.baeldung.com/registration-with-spring-mvc-and-spring-security
-- https://www.baeldung.com/spring-security-login
-- https://scalegrid.io/blog/using-jsonb-in-postgresql-how-to-effectively-store-index-json-data-in-postgresql/
-- https://www.tabnine.com/code/java/classes/okhttp3.Request$Builder
-- https://www.amazingcto.com/postgres-for-everything/
-- https://dubbo.apache.org/docs/v2.7/user/quick-start/
-- https://postgrest.org/en/stable/tutorials/tut0.html
-- https://prometheus.io/docs/prometheus/latest/querying/api/
-- https://grafana.com/
+# References
+- [Thymeleaf](https://www.baeldung.com/thymeleaf-in-spring-mvc): learn how to use thymeleaf in spring mvc
+- [Spring Security Filters](https://www.baeldung.com/security-none-filters-none-access-permitAll): learn how to use permitAll in spring security
+- [Spring Security Registration](https://www.baeldung.com/registration-with-spring-mvc-and-spring-security): learn how to use spring security with registration
+- [Spring Security Login](https://www.baeldung.com/spring-security-login): learn how to use spring security with login
+- [Postgresql and JsonB](https://scalegrid.io/blog/using-jsonb-in-postgresql-how-to-effectively-store-index-json-data-in-postgresql/): learn how to use jsonb in postgresql
+- [OkHttp3](https://www.tabnine.com/code/java/classes/okhttp3.Request$Builder): learn how to use okhttp3
+- [Postgres](https://www.amazingcto.com/postgres-for-everything/): learn how to use postgresql for any project
+- [Dubbo](https://dubbo.apache.org/docs/v2.7/user/quick-start/): learn how to use dubbo
+- [PostgREST](https://postgrest.org/en/stable/tutorials/tut0.html): learn how to use postgrest
+- [Prometheus](https://prometheus.io/docs/prometheus/latest/querying/api/): learn how to use prometheus
+- [Grafana](https://grafana.com/): learn how to use grafana

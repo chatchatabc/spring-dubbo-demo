@@ -5,7 +5,7 @@ import org.apache.spring.dubbo.consumer.commons.dto.UserDTO;
 import org.apache.spring.dubbo.consumer.login.web.LoginController;
 import org.apache.spring.dubbo.consumer.util.error.AppErrorFactory;
 import org.apache.spring.dubbo.consumer.util.error.AppErrorLogger;
-import org.apache.spring.dubbo.inter.register.api.RegisterService;
+import org.apache.spring.dubbo.inter.user.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,7 +18,7 @@ import java.io.IOException;
 public class RegisterController {
 
     @DubboReference
-    RegisterService registerService;
+    UserService userService;
 
     private static final AppErrorLogger log = AppErrorFactory.getLogger(LoginController.class);
 
@@ -31,12 +31,12 @@ public class RegisterController {
     }
 
     @PostMapping("/registration")
-    public String insertUser(@ModelAttribute("user") UserDTO userDTO) throws IOException {
+    public String createUser(@ModelAttribute("user") UserDTO userDTO) throws IOException {
         if(!userDTO.getPassword().equals(userDTO.getMatchingPassword())){
             return "error";
         }
 
-        String user = registerService.insertUser(userDTO.getUsername(), userDTO.getEmail(),userDTO.getPassword());
+        String user = userService.createUser(userDTO.getUsername(), userDTO.getEmail(),userDTO.getPassword());
 
         try {
             if (user.equals("success")) {

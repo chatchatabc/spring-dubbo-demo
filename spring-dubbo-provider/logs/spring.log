@@ -308,3 +308,77 @@
 2023-01-10 18:27:00.425  INFO 25960 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
 2023-01-10 18:27:00.445  INFO 25960 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
 2023-01-10 18:27:01.009  INFO 25960 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 3.013 seconds (JVM running for 3.578)
+2023-01-10 18:28:00.687  INFO 8460 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 8460 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-10 18:28:00.689  INFO 8460 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-10 18:28:01.573  INFO 8460 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-10 18:28:01.846  INFO 8460 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-10 18:28:01.869  INFO 8460 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-10 18:28:02.730  INFO 8460 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 51548
+2023-01-10 18:28:02.770  INFO 8460 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-10 18:28:02.792  INFO 8460 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-10 18:28:03.332  INFO 8460 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 2.98 seconds (JVM running for 3.519)
+2023-01-11 17:58:30.305  INFO 25916 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 25916 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-11 17:58:30.307  INFO 25916 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-11 17:58:31.326  INFO 25916 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-11 17:58:31.698  INFO 25916 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-11 17:58:31.729  INFO 25916 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-11 17:59:01.861  INFO 25916 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-11 17:59:01.875 ERROR 25916 --- [main] o.s.b.SpringApplication                  : Application run failed
+
+java.lang.IllegalStateException: java.lang.IllegalStateException: zookeeper not connected
+	at org.apache.dubbo.config.deploy.DefaultApplicationDeployer.prepareEnvironment(DefaultApplicationDeployer.java:683) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.config.deploy.DefaultApplicationDeployer.startConfigCenter(DefaultApplicationDeployer.java:266) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.config.deploy.DefaultApplicationDeployer.initialize(DefaultApplicationDeployer.java:190) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.config.deploy.DefaultModuleDeployer.prepare(DefaultModuleDeployer.java:479) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.config.spring.context.DubboConfigApplicationListener.initDubboConfigBeans(DubboConfigApplicationListener.java:71) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.config.spring.context.DubboConfigApplicationListener.onApplicationEvent(DubboConfigApplicationListener.java:57) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.config.spring.context.DubboConfigApplicationListener.onApplicationEvent(DubboConfigApplicationListener.java:35) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:176) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:169) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:143) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:131) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.registerListeners(AbstractApplicationContext.java:881) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:580) ~[spring-context-5.3.24.jar:5.3.24]
+	at org.springframework.boot.web.reactive.context.ReactiveWebServerApplicationContext.refresh(ReactiveWebServerApplicationContext.java:66) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.6.jar:2.7.6]
+	at org.apache.spring.dubbo.provider.SpringDubboProviderApplication.main(SpringDubboProviderApplication.java:12) ~[classes/:?]
+Caused by: java.lang.IllegalStateException: zookeeper not connected
+	at org.apache.dubbo.remoting.zookeeper.curator5.Curator5ZookeeperClient.<init>(Curator5ZookeeperClient.java:111) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.remoting.zookeeper.curator5.Curator5ZookeeperTransporter.createZookeeperClient(Curator5ZookeeperTransporter.java:27) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.remoting.zookeeper.AbstractZookeeperTransporter.connect(AbstractZookeeperTransporter.java:69) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.configcenter.support.zookeeper.ZookeeperDynamicConfiguration.<init>(ZookeeperDynamicConfiguration.java:62) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.configcenter.support.zookeeper.ZookeeperDynamicConfigurationFactory.createDynamicConfiguration(ZookeeperDynamicConfigurationFactory.java:38) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.common.config.configcenter.AbstractDynamicConfigurationFactory.lambda$getDynamicConfiguration$0(AbstractDynamicConfigurationFactory.java:39) ~[dubbo-3.1.3.jar:3.1.3]
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[?:?]
+	at org.apache.dubbo.common.config.configcenter.AbstractDynamicConfigurationFactory.getDynamicConfiguration(AbstractDynamicConfigurationFactory.java:39) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.config.deploy.DefaultApplicationDeployer.getDynamicConfiguration(DefaultApplicationDeployer.java:720) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.config.deploy.DefaultApplicationDeployer.prepareEnvironment(DefaultApplicationDeployer.java:676) ~[dubbo-3.1.3.jar:3.1.3]
+	... 19 more
+Caused by: java.lang.IllegalStateException: zookeeper not connected
+	at org.apache.dubbo.remoting.zookeeper.curator5.Curator5ZookeeperClient.<init>(Curator5ZookeeperClient.java:101) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.remoting.zookeeper.curator5.Curator5ZookeeperTransporter.createZookeeperClient(Curator5ZookeeperTransporter.java:27) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.remoting.zookeeper.AbstractZookeeperTransporter.connect(AbstractZookeeperTransporter.java:69) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.configcenter.support.zookeeper.ZookeeperDynamicConfiguration.<init>(ZookeeperDynamicConfiguration.java:62) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.configcenter.support.zookeeper.ZookeeperDynamicConfigurationFactory.createDynamicConfiguration(ZookeeperDynamicConfigurationFactory.java:38) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.common.config.configcenter.AbstractDynamicConfigurationFactory.lambda$getDynamicConfiguration$0(AbstractDynamicConfigurationFactory.java:39) ~[dubbo-3.1.3.jar:3.1.3]
+	at java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[?:?]
+	at org.apache.dubbo.common.config.configcenter.AbstractDynamicConfigurationFactory.getDynamicConfiguration(AbstractDynamicConfigurationFactory.java:39) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.config.deploy.DefaultApplicationDeployer.getDynamicConfiguration(DefaultApplicationDeployer.java:720) ~[dubbo-3.1.3.jar:3.1.3]
+	at org.apache.dubbo.config.deploy.DefaultApplicationDeployer.prepareEnvironment(DefaultApplicationDeployer.java:676) ~[dubbo-3.1.3.jar:3.1.3]
+	... 19 more
+
+2023-01-11 18:05:03.250  INFO 3360 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 3360 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-11 18:05:03.253  INFO 3360 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-11 18:05:04.284  INFO 3360 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-11 18:05:04.648  INFO 3360 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-11 18:05:04.675  INFO 3360 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-11 18:05:05.818  INFO 3360 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 52002
+2023-01-11 18:05:05.855  INFO 3360 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-11 18:05:05.876  INFO 3360 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-11 18:05:06.471  INFO 3360 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 3.715 seconds (JVM running for 4.37)
