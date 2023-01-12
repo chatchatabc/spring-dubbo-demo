@@ -2862,3 +2862,45 @@ Original Stack Trace:
 		at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?]
 		at java.lang.Thread.run(Thread.java:833) ~[?:?]
 
+2023-01-12 10:51:42.818  INFO 22900 --- [restartedMain] o.a.s.d.c.SpringDubboConsumerApplication : Starting SpringDubboConsumerApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 22900 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-consumer\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-12 10:51:42.825  INFO 22900 --- [restartedMain] o.a.s.d.c.SpringDubboConsumerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-12 10:51:42.879  INFO 22900 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-12 10:51:42.879  INFO 22900 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-12 10:51:44.466  INFO 22900 --- [restartedMain] f.a.ReferenceAnnotationBeanPostProcessor : Register dubbo reference bean: userService = ReferenceBean:org.apache.spring.dubbo.inter.user.UserService() at org.apache.spring.dubbo.inter.user.UserService org.apache.spring.dubbo.consumer.login.web.LoginController.userService
+2023-01-12 10:51:44.688  INFO 22900 --- [restartedMain] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-12 10:51:45.305  INFO 22900 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-12 10:51:45.319  INFO 22900 --- [restartedMain] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-12 10:51:45.377  INFO 22900 --- [restartedMain] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-12 10:51:45.980  INFO 22900 --- [restartedMain] o.a.d.c.s.r.ReferenceCreator             : The configBean[type:ReferenceConfig<org.apache.spring.dubbo.inter.user.UserService>] has been built.
+2023-01-12 10:51:47.246  INFO 22900 --- [restartedMain] o.s.b.w.e.n.NettyWebServer               : Netty started on port 8080
+2023-01-12 10:51:47.330  INFO 22900 --- [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-12 10:51:47.357  INFO 22900 --- [restartedMain] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39154
+2023-01-12 10:51:49.034  INFO 22900 --- [restartedMain] o.a.s.d.c.SpringDubboConsumerApplication : Started SpringDubboConsumerApplication in 6.853 seconds (JVM running for 8.041)
+2023-01-12 12:11:52.610  INFO 29264 --- [restartedMain] o.a.s.d.c.SpringDubboConsumerApplication : Starting SpringDubboConsumerApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 29264 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-consumer\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-12 12:11:52.615  INFO 29264 --- [restartedMain] o.a.s.d.c.SpringDubboConsumerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-12 12:11:52.664  INFO 29264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-12 12:11:52.664  INFO 29264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-12 12:11:53.935  INFO 29264 --- [restartedMain] f.a.ReferenceAnnotationBeanPostProcessor : Register dubbo reference bean: userService = ReferenceBean:org.apache.spring.dubbo.inter.user.UserService() at org.apache.spring.dubbo.inter.user.UserService org.apache.spring.dubbo.consumer.login.web.LoginController.userService
+2023-01-12 12:11:54.086  INFO 29264 --- [restartedMain] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-12 12:11:54.560  INFO 29264 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-12 12:11:54.568  INFO 29264 --- [restartedMain] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-12 12:11:54.617  INFO 29264 --- [restartedMain] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-12 12:11:55.151  INFO 29264 --- [restartedMain] o.a.d.c.s.r.ReferenceCreator             : The configBean[type:ReferenceConfig<org.apache.spring.dubbo.inter.user.UserService>] has been built.
+2023-01-12 12:11:56.053  INFO 29264 --- [restartedMain] o.s.b.w.e.n.NettyWebServer               : Netty started on port 8080
+2023-01-12 12:11:56.110  INFO 29264 --- [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-12 12:11:56.136  INFO 29264 --- [restartedMain] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39154
+2023-01-12 12:11:57.326  INFO 29264 --- [restartedMain] o.a.s.d.c.SpringDubboConsumerApplication : Started SpringDubboConsumerApplication in 5.322 seconds (JVM running for 6.884)
+2023-01-12 12:12:58.445  INFO 26764 --- [restartedMain] o.a.s.d.c.SpringDubboConsumerApplication : Starting SpringDubboConsumerApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 26764 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-consumer\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-12 12:12:58.448  INFO 26764 --- [restartedMain] o.a.s.d.c.SpringDubboConsumerApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-12 12:12:58.491  INFO 26764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-12 12:12:58.491  INFO 26764 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-12 12:12:59.747  INFO 26764 --- [restartedMain] f.a.ReferenceAnnotationBeanPostProcessor : Register dubbo reference bean: userService = ReferenceBean:org.apache.spring.dubbo.inter.user.UserService() at org.apache.spring.dubbo.inter.user.UserService org.apache.spring.dubbo.consumer.login.web.LoginController.userService
+2023-01-12 12:12:59.940  INFO 26764 --- [restartedMain] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-12 12:13:00.439  INFO 26764 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-01-12 12:13:00.449  INFO 26764 --- [restartedMain] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-12 12:13:00.491  INFO 26764 --- [restartedMain] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-12 12:13:00.958  INFO 26764 --- [restartedMain] o.a.d.c.s.r.ReferenceCreator             : The configBean[type:ReferenceConfig<org.apache.spring.dubbo.inter.user.UserService>] has been built.
+2023-01-12 12:13:01.827  INFO 26764 --- [restartedMain] o.s.b.w.e.n.NettyWebServer               : Netty started on port 8080
+2023-01-12 12:13:01.887  INFO 26764 --- [restartedMain] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-12 12:13:01.932  INFO 26764 --- [restartedMain] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39154
+2023-01-12 12:13:03.098  INFO 26764 --- [restartedMain] o.a.s.d.c.SpringDubboConsumerApplication : Started SpringDubboConsumerApplication in 5.057 seconds (JVM running for 5.871)

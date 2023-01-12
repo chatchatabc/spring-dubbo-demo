@@ -1,4 +1,4 @@
-package org.apache.spring.dubbo.consumer.login.web;
+package org.apache.spring.dubbo.consumer.application.dubbo.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

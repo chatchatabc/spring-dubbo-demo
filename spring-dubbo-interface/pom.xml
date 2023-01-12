@@ -10,4 +10,12 @@
     <artifactId>spring-dubbo-interface</artifactId>
     <modelVersion>4.0.0</modelVersion>
 
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+
 </project>

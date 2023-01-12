@@ -1,9 +1,11 @@
-package org.apache.spring.dubbo.provider.facade;
+package org.apache.spring.dubbo.provider.adapter;
 
 
-import org.apache.spring.dubbo.inter.user.UserService;
+import org.apache.spring.dubbo.port.UserPort;
+import org.apache.spring.dubbo.port.dto.UserDTO;
 import org.apache.spring.dubbo.provider.SpringBootBaseTest;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -12,31 +14,34 @@ import java.io.IOException;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class UserServiceTest extends SpringBootBaseTest {
+public class NetworkPortTest extends SpringBootBaseTest {
 
     @Autowired
-    UserService userService;
-
-
+    UserPort userPort;
 
     @AfterEach
     void removeTestCreatedUser() throws IOException {
-        userService.removeUser("sample@email.com");
+        userPort.removeUser("sample@email.com");
     }
 
     @Test
     public void loginSuccessTest() throws IOException {
-
-        Boolean val = userService.findByEmail("admin@email.com", "123");
+        UserDTO userDTO = new UserDTO();
+        userDTO.setEmail("admin@email.com");
+        userDTO.setPassword("123");
+        Boolean val = userPort.findByEmail(userDTO);
 
         assertThat(val).isTrue();
     }
 
     @Test
     public void createUserSuccessTest() {
-
+        UserDTO userDTO = new UserDTO();
+        userDTO.setUsername("sample");
+        userDTO.setEmail("sample@email.com");
+        userDTO.setPassword("123456");
         Exception exception = assertThrows(IOException.class, () -> {
-            userService.createUser("sample", "sample@email.com", "123456");
+            userPort.createUser(userDTO);
         });
 
         String expectedMessage = "1";

@@ -4,7 +4,6 @@ GET http://localhost:8090/users
 ### test get specific user
 GET http://localhost:8090/users?email=eq.admin@email.com&password=eq.123
 
-
 ### post
 POST http://localhost:8090/users
 Content-Type:application/json

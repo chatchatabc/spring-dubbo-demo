@@ -400,3 +400,12 @@ Caused by: java.lang.IllegalStateException: zookeeper not connected
 2023-01-12 09:56:38.388  INFO 22780 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
 2023-01-12 09:56:38.445  INFO 22780 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
 2023-01-12 09:56:39.545  INFO 22780 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 6.499 seconds (JVM running for 8.634)
+2023-01-12 12:12:55.615  INFO 21388 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Starting SpringDubboProviderApplication using Java 17.0.5 on LAPTOP-753I5RSM with PID 21388 (C:\Users\mikea\IdeaProjects\spring-dubbo-demo\spring-dubbo-provider\target\classes started by mikea in C:\Users\mikea\IdeaProjects\spring-dubbo-demo)
+2023-01-12 12:12:55.630  INFO 21388 --- [main] o.a.s.d.p.SpringDubboProviderApplication : No active profile set, falling back to 1 default profile: "default"
+2023-01-12 12:12:57.177  INFO 21388 --- [main] f.a.ReferenceAnnotationBeanPostProcessor : class org.apache.dubbo.config.spring.beans.factory.annotation.ReferenceAnnotationBeanPostProcessor was destroying!
+2023-01-12 12:12:57.719  INFO 21388 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : loading dubbo config beans ...
+2023-01-12 12:12:57.750  INFO 21388 --- [main] o.a.d.c.s.c.DubboConfigBeanInitializer   : dubbo config beans are loaded.
+2023-01-12 12:12:59.333  INFO 21388 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 57551
+2023-01-12 12:12:59.383  INFO 21388 --- [main] o.s.b.a.e.w.EndpointLinksResolver        : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-01-12 12:12:59.417  INFO 21388 --- [main] o.s.b.w.e.n.NettyWebServer               : Netty started on port 39155
+2023-01-12 12:13:00.435  INFO 21388 --- [main] o.a.s.d.p.SpringDubboProviderApplication : Started SpringDubboProviderApplication in 5.327 seconds (JVM running for 6.106)
