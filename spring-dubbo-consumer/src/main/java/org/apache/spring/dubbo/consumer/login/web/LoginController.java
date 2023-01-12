@@ -26,7 +26,7 @@ public class LoginController {
         return "login";
     }
 
-    @PostMapping("/")
+    @PostMapping("/login")
     public String authUser(@ModelAttribute UserDTO userDTO) throws IOException {
 
         Boolean user = userService.findByEmail(userDTO.getEmail(), userDTO.getPassword());

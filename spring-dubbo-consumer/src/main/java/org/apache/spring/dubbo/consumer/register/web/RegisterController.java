@@ -40,7 +40,7 @@ public class RegisterController {
 
         try {
             if (user.equals("success")) {
-                return "login";
+                return "/login";
             } else {
                 log.error("APP-100-300", userDTO.getEmail());
                 return "error";

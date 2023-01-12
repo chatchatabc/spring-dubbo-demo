@@ -15,8 +15,8 @@ import java.util.List;
 @DubboService
 public class UserServiceFacade implements UserService {
 
-    OkHttpClient client = new OkHttpClient();
-    Gson gson = new Gson();
+    private final OkHttpClient client = new OkHttpClient();
+    private final Gson gson = new Gson();
 
     @Override
     public Boolean findByEmail(String email, String password) throws IOException {
