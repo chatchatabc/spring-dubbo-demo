@@ -5,6 +5,7 @@ import org.apache.spring.dubbo.port.dto.UserDTO;
 import org.apache.spring.dubbo.consumer.util.error.AppErrorFactory;
 import org.apache.spring.dubbo.consumer.util.error.AppErrorLogger;
 import org.apache.spring.dubbo.port.UserPort;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.io.IOException;
 
+@Controller
 public class UserFacade {
     @DubboReference
     UserPort userPort;
@@ -25,15 +27,9 @@ public class UserFacade {
 
     @PostMapping("/login")
     public String authUser(@ModelAttribute UserDTO userDTO) throws IOException {
-
         Boolean user = userPort.findByEmail(userDTO);
         try {
-            if (user) {
-                return "homepage";
-            } else {
-                log.error("APP-100-300", userDTO.getEmail());
-                return "error";
-            }
+           return user ? "homepage" : "login";
         } catch (Exception e) {
             return e.getMessage();
         }

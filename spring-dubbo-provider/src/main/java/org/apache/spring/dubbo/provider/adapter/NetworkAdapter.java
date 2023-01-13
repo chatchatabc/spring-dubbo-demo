@@ -5,17 +5,19 @@ import com.google.gson.reflect.TypeToken;
 import okhttp3.*;
 import org.apache.spring.dubbo.provider.domain.model.User;
 import org.apache.spring.dubbo.provider.infra.okhttp3.NetworkPort;
+import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.util.List;
 
+@Repository
 public class NetworkAdapter implements NetworkPort {
 
     private final OkHttpClient client = new OkHttpClient();
     private final Gson gson = new Gson();
 
     @Override
-    public Response get(String url) throws IOException {
+    public String get(String url) throws IOException {
         Request request = new Request.Builder()
                 .url(url)
                 .get()
@@ -24,12 +26,15 @@ public class NetworkAdapter implements NetworkPort {
             if (!response.isSuccessful()) {
                 throw new IOException("Unexpected code " + response);
             }
-            return response;
+            System.out.println(response);
+            assert response.body() != null;
+            return response.body().string();
         }
     }
 
     @Override
-    public Response post(String url, RequestBody body) throws IOException {
+    public String post(String url, String json) throws IOException {
+        RequestBody body = RequestBody.create(json, MediaType.get("application/json; charset=utf-8"));
         Request request = new Request.Builder()
                 .url(url)
                 .post(body)
@@ -38,7 +43,7 @@ public class NetworkAdapter implements NetworkPort {
             if (!response.isSuccessful()) {
                 throw new IOException("Unexpected code " + response);
             }
-            return response;
+            return response.message();
         }
     }
 
@@ -48,7 +53,7 @@ public class NetworkAdapter implements NetworkPort {
     }
 
     @Override
-    public Response delete(String url) throws IOException {
+    public void delete(String url) throws IOException {
         Request request = new Request.Builder()
                 .url(url)
                 .delete()
@@ -57,26 +62,17 @@ public class NetworkAdapter implements NetworkPort {
             if (!response.isSuccessful()) {
                 throw new IOException("Unexpected code " + response);
             }
-            return response;
         }
     }
 
     @Override
-    public RequestBody parseToGson(User user) {
-        String json = gson.toJson(user);
-        return RequestBody.create(json, MediaType.get("application/json; charset=utf-8"));
+    public String parseToGson(User user) {
+        return gson.toJson(user);
     }
 
     @Override
-    public List<User> parseFromGson(Response response) throws IOException {
-        try (response) {
-            if (!response.isSuccessful()) {
-                throw new IOException("Unexpected code " + response);
-            }
-            assert response.body() != null;
-            String json = response.body().string();
-            return gson.fromJson(json, new TypeToken<List<User>>() {
-            }.getType());
-        }
+    public List<User> parseFromGson(String json) {
+        return gson.fromJson(json, new TypeToken<List<User>>() {
+        }.getType());
     }
 }

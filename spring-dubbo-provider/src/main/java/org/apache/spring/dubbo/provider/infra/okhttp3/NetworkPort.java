@@ -2,23 +2,23 @@ package org.apache.spring.dubbo.provider.infra.okhttp3;
 
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 import org.apache.spring.dubbo.provider.domain.model.User;
-import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.util.List;
 
-@Repository
 public interface NetworkPort {
-    Response get(String url) throws IOException;
+    String get(String url) throws IOException;
 
-    Response post(String url, RequestBody body) throws IOException;
+    String post(String url, String json) throws IOException;
 
     Response put(String url, RequestBody body) throws IOException;
 
-    Response delete(String url) throws IOException;
+    void delete(String url) throws IOException;
 
-    List<User> parseFromGson(Response response) throws IOException;
+    List<User> parseFromGson(String json) throws IOException;
 
-    RequestBody parseToGson(User user);
+    String parseToGson(User user);
+
 }

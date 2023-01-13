@@ -23,6 +23,7 @@ public class UserAdapter implements UserPort {
     public Boolean findByEmail(UserDTO userDTO) throws IOException {
         String url = "http://localhost:8090/users?select=email,password&email=eq."+ userDTO.getEmail() +"&password=eq." + userDTO.getPassword();
         List<User> users = networkPort.parseFromGson(networkPort.get(url));
+        System.out.println(users);
         return users.size() == 1;
     }
 
@@ -33,11 +34,8 @@ public class UserAdapter implements UserPort {
         user.setPassword(userDTO.getPassword());
         user.setUsername(userDTO.getUsername());
         String url = "http://localhost:8090/users";
-        Response response = networkPort.post(url, networkPort.parseToGson(user));
-        if(response.isSuccessful()){
-            return "success";
-        }
-        return "error";
+        String result = networkPort.post(url, networkPort.parseToGson(user));
+        return result != null ? "success" : "fail";
     }
 
     public void removeUser(String email) throws IOException {
