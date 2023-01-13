@@ -32,7 +32,7 @@ Postgresql is used as the database but with postgREST web service to deliver dat
    replace 15 with the version of postgresql installed. After running command, restart PC to apply changes.
 3. Open the application then enter the command at terminal/shell
    ```sh
-       docker-compose -f "./src/main/config/docker-compose.yml" up 
+       docker-compose up 
    ```
 4. check application.properties in the `/src/main/resources` if the port on `dubbo.registry.address`, `dubbo.config-center.address`, `dubbo.metadata-report.address` is the same as the port assigned on the docker container zookeeper
 5. run on terminal/shell
