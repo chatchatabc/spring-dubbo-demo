@@ -9,6 +9,7 @@ import org.slf4j.helpers.MessageFormatter;
 import java.util.Locale;
 import java.util.ResourceBundle;
 
+@SuppressWarnings("unused")
 public class AppErrorLogger implements Logger {
     private final Logger delegate;
     private static final String BUNDLE_FQN = "app.ErrorMessages";

@@ -3,6 +3,7 @@ package org.apache.spring.dubbo.provider.util.error;
 
 import org.slf4j.LoggerFactory;
 
+@SuppressWarnings("unused")
 public class AppErrorFactory {
     public static AppErrorLogger getLogger(Class<?> clazz) {
 

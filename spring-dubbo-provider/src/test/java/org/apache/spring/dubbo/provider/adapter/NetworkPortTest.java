@@ -5,7 +5,6 @@ import org.apache.spring.dubbo.port.UserPort;
 import org.apache.spring.dubbo.port.dto.UserDTO;
 import org.apache.spring.dubbo.provider.SpringBootBaseTest;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -40,9 +39,7 @@ public class NetworkPortTest extends SpringBootBaseTest {
         userDTO.setUsername("sample");
         userDTO.setEmail("sample@email.com");
         userDTO.setPassword("123456");
-        Exception exception = assertThrows(IOException.class, () -> {
-            userPort.createUser(userDTO);
-        });
+        Exception exception = assertThrows(IOException.class, () -> userPort.createUser(userDTO));
 
         String expectedMessage = "1";
         String actualMessage = exception.getMessage();

@@ -1,17 +1,19 @@
 package org.apache.spring.dubbo.provider.adapter;
 
-import okhttp3.*;
 import org.apache.dubbo.config.annotation.DubboService;
 import org.apache.spring.dubbo.port.UserPort;
 import org.apache.spring.dubbo.port.dto.UserDTO;
 import org.apache.spring.dubbo.provider.domain.model.User;
-import org.apache.spring.dubbo.provider.infra.okhttp3.NetworkPort;
+import org.apache.spring.dubbo.provider.infra.port.okhttp3.NetworkPort;
+import org.apache.spring.dubbo.provider.util.error.AppErrorFactory;
+import org.apache.spring.dubbo.provider.util.error.AppErrorLogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 import java.util.List;
 
+@SuppressWarnings("SpringJavaAutowiredFieldsWarningInspection")
 @Service
 @DubboService
 public class UserAdapter implements UserPort {
@@ -19,12 +21,18 @@ public class UserAdapter implements UserPort {
     @Autowired
     NetworkPort networkPort;
 
+    private static final AppErrorLogger log = AppErrorFactory.getLogger(UserAdapter.class);
+
     @Override
     public Boolean findByEmail(UserDTO userDTO) throws IOException {
         String url = "http://localhost:8090/users?select=email,password&email=eq."+ userDTO.getEmail() +"&password=eq." + userDTO.getPassword();
         List<User> users = networkPort.parseFromGson(networkPort.get(url));
-        System.out.println(users);
-        return users.size() == 1;
+        if(users.size() == 1){
+            return true;
+        }else {
+            log.error("APP-100-200");
+            return false;
+        }
     }
 
     @Override

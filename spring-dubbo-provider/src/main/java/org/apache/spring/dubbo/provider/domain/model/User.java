@@ -1,13 +1,10 @@
 package org.apache.spring.dubbo.provider.domain.model;
 import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.annotation.Nullable;
 import java.sql.Timestamp;
 import java.time.Instant;
-import java.time.LocalDate;
 
 @Data
 public class User {

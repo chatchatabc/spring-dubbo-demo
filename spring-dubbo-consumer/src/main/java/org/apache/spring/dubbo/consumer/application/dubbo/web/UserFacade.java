@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.io.IOException;
 
+@SuppressWarnings("PlaceholderCountMatchesArgumentCount")
 @Controller
 public class UserFacade {
     @DubboReference

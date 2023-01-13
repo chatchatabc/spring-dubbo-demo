@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @EnableDubbo
 public class SpringDubboProviderApplication  {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         SpringApplication.run(SpringDubboProviderApplication.class, args);
     }
 

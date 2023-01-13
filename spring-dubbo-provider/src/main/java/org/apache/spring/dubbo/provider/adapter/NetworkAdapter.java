@@ -4,12 +4,13 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import okhttp3.*;
 import org.apache.spring.dubbo.provider.domain.model.User;
-import org.apache.spring.dubbo.provider.infra.okhttp3.NetworkPort;
+import org.apache.spring.dubbo.provider.infra.port.okhttp3.NetworkPort;
 import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.util.List;
 
+@SuppressWarnings("CommentedOutCode")
 @Repository
 public class NetworkAdapter implements NetworkPort {
 
@@ -22,7 +23,7 @@ public class NetworkAdapter implements NetworkPort {
                 .url(url)
                 .get()
                 .build();
-        try (Response response = client.newCall(request).execute();) {
+        try (Response response = client.newCall(request).execute()) {
             if (!response.isSuccessful()) {
                 throw new IOException("Unexpected code " + response);
             }
@@ -39,7 +40,7 @@ public class NetworkAdapter implements NetworkPort {
                 .url(url)
                 .post(body)
                 .build();
-        try (Response response = client.newCall(request).execute();) {
+        try (Response response = client.newCall(request).execute()) {
             if (!response.isSuccessful()) {
                 throw new IOException("Unexpected code " + response);
             }
@@ -47,10 +48,11 @@ public class NetworkAdapter implements NetworkPort {
         }
     }
 
-    @Override
-    public Response put(String url, RequestBody body) throws IOException {
-        return null;
-    }
+// future code for edit profile
+//    @Override
+//    public Response put(String url, RequestBody body) {
+//        return null;
+//    }
 
     @Override
     public void delete(String url) throws IOException {
