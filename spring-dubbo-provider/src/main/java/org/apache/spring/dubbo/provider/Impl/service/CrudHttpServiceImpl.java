@@ -1,10 +1,10 @@
-package org.apache.spring.dubbo.provider.adapter;
+package org.apache.spring.dubbo.provider.Impl.service;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import okhttp3.*;
 import org.apache.spring.dubbo.provider.domain.model.User;
-import org.apache.spring.dubbo.provider.infra.port.okhttp3.NetworkPort;
+import org.apache.spring.dubbo.provider.domain.service.CrudHttpService;
 import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
@@ -12,7 +12,7 @@ import java.util.List;
 
 @SuppressWarnings("CommentedOutCode")
 @Repository
-public class NetworkAdapter implements NetworkPort {
+public class CrudHttpServiceImpl implements CrudHttpService {
 
     private final OkHttpClient client = new OkHttpClient();
     private final Gson gson = new Gson();

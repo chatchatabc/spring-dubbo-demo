@@ -4,12 +4,12 @@ import org.apache.spring.dubbo.port.dto.UserDTO;
 
 import java.io.IOException;
 
-public interface UserPort {
+public interface UserFacade {
 
+    Boolean authUser(UserDTO userDTO) throws IOException;
 
-    Boolean findByEmail(UserDTO userDTO) throws IOException;
-
-    String createUser(UserDTO userDTO) throws IOException;
+    String registerUser(UserDTO userDTO) throws IOException;
 
     void removeUser(String email) throws IOException;
+
 }

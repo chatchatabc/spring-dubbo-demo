@@ -1,10 +1,10 @@
 package org.apache.spring.dubbo.consumer.application.dubbo.web;
 
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.spring.dubbo.port.UserFacade;
 import org.apache.spring.dubbo.port.dto.UserDTO;
 import org.apache.spring.dubbo.consumer.util.error.AppErrorFactory;
 import org.apache.spring.dubbo.consumer.util.error.AppErrorLogger;
-import org.apache.spring.dubbo.port.UserPort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,11 +15,11 @@ import java.io.IOException;
 
 @SuppressWarnings("PlaceholderCountMatchesArgumentCount")
 @Controller
-public class UserFacade {
+public class UserController {
     @DubboReference
-    UserPort userPort;
+    UserFacade userFacade;
 
-    private static final AppErrorLogger log = AppErrorFactory.getLogger(UserFacade.class);
+    private static final AppErrorLogger log = AppErrorFactory.getLogger(UserController.class);
 
     @GetMapping("/")
     public String login(){
@@ -27,8 +27,8 @@ public class UserFacade {
     }
 
     @PostMapping("/login")
-    public String authUser(@ModelAttribute UserDTO userDTO) throws IOException {
-        Boolean user = userPort.findByEmail(userDTO);
+    public String loginUser(@ModelAttribute UserDTO userDTO) throws IOException {
+        Boolean user = userFacade.authUser(userDTO);
         try {
            return user ? "homepage" : "login";
         } catch (Exception e) {
@@ -36,20 +36,20 @@ public class UserFacade {
         }
     }
 
-    @GetMapping("/registration")
+    @GetMapping("/register")
     public String register(Model model){
         UserDTO userDTO = new UserDTO();
         model.addAttribute("user", userDTO);
         return "registration";
     }
 
-    @PostMapping("/registration")
-    public String createUser(@ModelAttribute("user") UserDTO userDTO) throws IOException {
+    @PostMapping("/register")
+    public String register(@ModelAttribute("user") UserDTO userDTO) throws IOException {
         if(!userDTO.getPassword().equals(userDTO.getMatchingPassword())){
             return "error";
         }
 
-        String user = userPort.createUser(userDTO);
+        String user = userFacade.registerUser(userDTO);
 
         try {
             if (user.equals("success")) {

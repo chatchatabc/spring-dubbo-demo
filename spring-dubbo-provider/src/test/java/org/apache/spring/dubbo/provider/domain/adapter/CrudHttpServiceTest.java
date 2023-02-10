@@ -1,7 +1,7 @@
-package org.apache.spring.dubbo.provider.adapter;
+package org.apache.spring.dubbo.provider.domain.adapter;
 
 
-import org.apache.spring.dubbo.port.UserPort;
+import org.apache.spring.dubbo.port.UserFacade;
 import org.apache.spring.dubbo.port.dto.UserDTO;
 import org.apache.spring.dubbo.provider.SpringBootBaseTest;
 import org.junit.jupiter.api.AfterEach;
@@ -13,14 +13,14 @@ import java.io.IOException;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class NetworkPortTest extends SpringBootBaseTest {
+public class CrudHttpServiceTest extends SpringBootBaseTest {
 
     @Autowired
-    UserPort userPort;
+    UserFacade userFacade;
 
     @AfterEach
     void removeTestCreatedUser() throws IOException {
-        userPort.removeUser("sample@email.com");
+        userFacade.removeUser("sample@email.com");
     }
 
     @Test
@@ -28,7 +28,7 @@ public class NetworkPortTest extends SpringBootBaseTest {
         UserDTO userDTO = new UserDTO();
         userDTO.setEmail("admin@email.com");
         userDTO.setPassword("123");
-        Boolean val = userPort.findByEmail(userDTO);
+        Boolean val = userFacade.authUser(userDTO);
 
         assertThat(val).isTrue();
     }
@@ -39,7 +39,7 @@ public class NetworkPortTest extends SpringBootBaseTest {
         userDTO.setUsername("sample");
         userDTO.setEmail("sample@email.com");
         userDTO.setPassword("123456");
-        Exception exception = assertThrows(IOException.class, () -> userPort.createUser(userDTO));
+        Exception exception = assertThrows(IOException.class, () -> userFacade.authUser(userDTO));
 
         String expectedMessage = "1";
         String actualMessage = exception.getMessage();

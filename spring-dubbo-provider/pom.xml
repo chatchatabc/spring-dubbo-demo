@@ -16,6 +16,7 @@
         <rider-core.version>1.35.0</rider-core.version>
         <rider-spring.version>1.35.0</rider-spring.version>
     </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -82,7 +83,6 @@
             <scope>test</scope>
         </dependency>
 
-
         <dependency>
             <groupId>com.github.database-rider</groupId>
             <artifactId>rider-core</artifactId>
@@ -102,7 +102,6 @@
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo</artifactId>
         </dependency>
-
 
         <dependency>
             <groupId>org.apache.dubbo</groupId>

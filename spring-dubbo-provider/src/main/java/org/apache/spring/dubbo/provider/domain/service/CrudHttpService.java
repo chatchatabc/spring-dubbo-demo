@@ -1,9 +1,9 @@
-package org.apache.spring.dubbo.provider.infra.port.okhttp3;
+package org.apache.spring.dubbo.provider.domain.service;
 import org.apache.spring.dubbo.provider.domain.model.User;
 import java.io.IOException;
 import java.util.List;
 
-public interface NetworkPort {
+public interface CrudHttpService {
     String get(String url) throws IOException;
 
     String post(String url, String json) throws IOException;

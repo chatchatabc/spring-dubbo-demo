@@ -22,6 +22,15 @@ Postgresql is used as the database but with postgREST web service to deliver dat
 * Grafana (metrics data monitoring and presenting)
 * Will add more in the future
 
+# Tools
+   * Grafana
+   * Prometheus
+   * PostgREST
+   * Postgresql
+   * Zookeeper
+   * Dubbo
+   * Spring Boot
+
 # Getting Started
 
 1. Download and install Docker, Postgresql, Java with their appropriate versions.
