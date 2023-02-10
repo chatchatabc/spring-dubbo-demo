@@ -18,13 +18,11 @@ Postgresql is used as the database but with postgREST web service to deliver dat
 
 * Login page
 * Registration page
-* Prometheus (metrics scraper and storage)
-* Grafana (metrics data monitoring and presenting)
 * Will add more in the future
 
 # Tools
-   * Grafana
-   * Prometheus
+   * Grafana (metrics data monitoring and presenting)
+   * Prometheus (metrics scraper and storage)
    * PostgREST
    * Postgresql
    * Zookeeper
@@ -52,7 +50,7 @@ Postgresql is used as the database but with postgREST web service to deliver dat
 
 # Issues
 
-- None as of the moment
+- Register page is not working yet
 
 # References
 - [Thymeleaf](https://www.baeldung.com/thymeleaf-in-spring-mvc): learn how to use thymeleaf in spring mvc
