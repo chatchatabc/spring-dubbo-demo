@@ -1,4 +1,4 @@
-package org.apache.spring.dubbo.provider.Impl.service;
+package org.apache.spring.dubbo.provider.Impl.domain.service;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

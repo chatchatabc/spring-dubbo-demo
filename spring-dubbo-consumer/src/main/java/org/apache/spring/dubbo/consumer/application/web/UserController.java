@@ -1,4 +1,4 @@
-package org.apache.spring.dubbo.consumer.application.dubbo.web;
+package org.apache.spring.dubbo.consumer.application.web;
 
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.spring.dubbo.port.UserFacade;

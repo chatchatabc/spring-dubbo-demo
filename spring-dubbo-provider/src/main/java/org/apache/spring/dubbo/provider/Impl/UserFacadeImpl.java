@@ -5,6 +5,7 @@ import org.apache.spring.dubbo.port.UserFacade;
 import org.apache.spring.dubbo.port.dto.UserDTO;
 import org.apache.spring.dubbo.provider.domain.model.User;
 import org.apache.spring.dubbo.provider.domain.service.CrudHttpService;
+import org.apache.spring.dubbo.provider.util.CodecUtils;
 import org.apache.spring.dubbo.provider.util.error.AppErrorFactory;
 import org.apache.spring.dubbo.provider.util.error.AppErrorLogger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +19,14 @@ import java.util.List;
 @DubboService
 public class UserFacadeImpl implements UserFacade {
 
+    final CrudHttpService crudHttpService;
+    final CodecUtils codecUtils;
+
     @Autowired
-    CrudHttpService crudHttpService;
+    private UserFacadeImpl(CodecUtils codecUtils, CrudHttpService crudHttpService) {
+        this.codecUtils = codecUtils;
+        this.crudHttpService = crudHttpService;
+    }
 
     private static final AppErrorLogger log = AppErrorFactory.getLogger(UserFacadeImpl.class);
 
@@ -37,10 +44,12 @@ public class UserFacadeImpl implements UserFacade {
 
     @Override
     public String registerUser(UserDTO userDTO) throws IOException {
+        String salt = codecUtils.generateSalt();
         User user = new User();
         user.setEmail(userDTO.getEmail());
-        user.setPassword(userDTO.getPassword());
+        user.setPassword(codecUtils.hash(userDTO.getPassword(), salt));
         user.setUsername(userDTO.getUsername());
+        user.setSalt(salt);
         String url = "http://localhost:8090/users";
         String result = crudHttpService.post(url, crudHttpService.parseToGson(user));
         return result != null ? "success" : "fail";

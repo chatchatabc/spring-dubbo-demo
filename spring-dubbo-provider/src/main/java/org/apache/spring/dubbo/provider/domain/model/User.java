@@ -13,8 +13,8 @@ public class User {
     private Long id;
     private String username;
     private String password;
-
     private String email;
+    private String salt;
 
     @Expose
     private Timestamp dateat = Timestamp.from(Instant.now());
