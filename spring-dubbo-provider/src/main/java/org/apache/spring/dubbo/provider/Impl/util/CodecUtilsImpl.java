@@ -1,4 +1,4 @@
-package org.apache.spring.dubbo.provider.Impl.domain.specification;
+package org.apache.spring.dubbo.provider.Impl.util;
 
 import com.google.common.base.Charsets;
 import com.google.common.collect.Lists;

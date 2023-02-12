@@ -27,10 +27,11 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public String loginUser(@ModelAttribute UserDTO userDTO) throws IOException {
-        Boolean user = userFacade.authUser(userDTO);
+    public String loginUser(String email, String password, Model model) throws IOException {
         try {
-           return user ? "homepage" : "login";
+            UserDTO user = userFacade.authUser(email, password);
+            model.addAttribute("user", user);
+           return "homepage";
         } catch (Exception e) {
             return e.getMessage();
         }

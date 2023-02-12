@@ -25,21 +25,13 @@ public class CrudHttpServiceTest extends SpringBootBaseTest {
 
     @Test
     public void loginSuccessTest() throws IOException {
-        UserDTO userDTO = new UserDTO();
-        userDTO.setEmail("admin@email.com");
-        userDTO.setPassword("123");
-        Boolean val = userFacade.authUser(userDTO);
-
-        assertThat(val).isTrue();
+        UserDTO user = userFacade.authUser("admin@email.com", "123");
+        assertThat(user.getEmail()).isNotNull();
     }
 
     @Test
     public void createUserSuccessTest() {
-        UserDTO userDTO = new UserDTO();
-        userDTO.setUsername("sample");
-        userDTO.setEmail("sample@email.com");
-        userDTO.setPassword("123456");
-        Exception exception = assertThrows(IOException.class, () -> userFacade.authUser(userDTO));
+        Exception exception = assertThrows(IOException.class, () -> userFacade.authUser("sample@email.com", "123456"));
 
         String expectedMessage = "1";
         String actualMessage = exception.getMessage();

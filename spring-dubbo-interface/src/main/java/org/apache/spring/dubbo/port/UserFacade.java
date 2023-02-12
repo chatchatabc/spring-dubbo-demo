@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public interface UserFacade {
 
-    Boolean authUser(UserDTO userDTO) throws IOException;
+    UserDTO authUser(String email, String password) throws IOException;
 
     String registerUser(UserDTO userDTO) throws IOException;
 

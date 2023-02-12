@@ -52,6 +52,11 @@ Postgresql is used as the database but with postgREST web service to deliver dat
 
 - Register page is not working yet
 
+# Todo
+
+- finish register page
+- refactor code to DDD + facade pattern structure (clean architecture)
+
 # References
 - [Thymeleaf](https://www.baeldung.com/thymeleaf-in-spring-mvc): learn how to use thymeleaf in spring mvc
 - [Spring Security Filters](https://www.baeldung.com/security-none-filters-none-access-permitAll): learn how to use permitAll in spring security
