@@ -36,14 +36,22 @@ public class UserFacadeImpl implements UserFacade {
 
     @Override
     public UserDTO authUser(String email, String password) throws IOException {
-        String url = "http://localhost:8090/users?select=email,password&email=eq."+ email +"&password=eq." + password;
-        return crudHttpService.parseFromGson(crudHttpService.get(url))
-                .stream().map(user -> codecUtils.matches(password, user.getPassword(), user.getSalt())).collect(UserDTO::new, UserDTO::setUsername, UserDTO::setPassword, UserDTO::setEmail, UserDTO::setSalt);
-
+        UserDTO userDTO = new UserDTO();
+        String url = "http://localhost:8090/users?select=id,email,password,salt,username&email=eq."+ email;
+        crudHttpService.parseFromGson(crudHttpService.get(url)).stream()
+                 .filter(user -> codecUtils.matches(password, user.getPassword(), user.getSalt()))
+                 .forEach(user -> {
+                     userDTO.setSerialVersionUID(user.getId());
+                     userDTO.setEmail(user.getEmail());
+                     userDTO.setPassword(user.getPassword());
+                     userDTO.setUsername(user.getUsername());
+                 });
+        System.out.println(userDTO);
+         return userDTO;
     }
 
     @Override
-    public String registerUser(UserDTO userDTO) throws IOException {
+    public UserDTO registerUser(UserDTO userDTO) throws IOException {
         String salt = codecUtils.generateSalt();
         User user = new User();
         user.setEmail(userDTO.getEmail());
@@ -53,9 +61,15 @@ public class UserFacadeImpl implements UserFacade {
         if(userSpec.isEmailExist(user.getEmail())){
             throw new IOException("User already exists: " + user.getEmail());
         }else{
+            UserDTO userDTOReturn = new UserDTO();
             String url = "http://localhost:8090/users";
-            String result = crudHttpService.post(url, crudHttpService.parseToGson(user));
-            return result.isEmpty() ? "fail" : "success";
+            crudHttpService.parseFromGson(crudHttpService.post(url, crudHttpService.parseToGson(user)))
+                   .forEach(result -> {
+                       userDTOReturn.setEmail(result.getEmail());
+                       userDTOReturn.setPassword(result.getPassword());
+                       userDTOReturn.setUsername(result.getUsername());
+                    });
+            return userDTOReturn;
         }
 
     }

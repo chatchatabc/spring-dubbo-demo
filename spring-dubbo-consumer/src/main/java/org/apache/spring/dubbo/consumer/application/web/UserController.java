@@ -1,6 +1,7 @@
 package org.apache.spring.dubbo.consumer.application.web;
 
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.spring.dubbo.consumer.application.common.vo.UserRegistrationVO;
 import org.apache.spring.dubbo.port.UserFacade;
 import org.apache.spring.dubbo.port.dto.UserDTO;
 import org.apache.spring.dubbo.consumer.util.error.AppErrorFactory;
@@ -10,6 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.reactive.result.view.RedirectView;
 
 import java.io.IOException;
 
@@ -27,12 +30,18 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public String loginUser(String email, String password, Model model) throws IOException {
+    public String loginUser(String email, String password, Model model) {
         try {
-            UserDTO user = userFacade.authUser(email, password);
-            model.addAttribute("user", user);
-           return "homepage";
-        } catch (Exception e) {
+            System.out.println(email);
+            System.out.println(password);
+            final UserDTO userDTO = userFacade.authUser(email, password);
+            System.out.println(userDTO);
+            if(userDTO.getEmail().isEmpty()){
+                return "login";
+            }
+            model.addAttribute("user", userDTO);
+            return "homepage";
+        } catch (IOException e) {
             return e.getMessage();
         }
     }
@@ -45,20 +54,27 @@ public class UserController {
     }
 
     @PostMapping("/register")
-    public String register(@ModelAttribute("user") UserDTO userDTO) throws IOException {
-        if(!userDTO.getPassword().equals(userDTO.getMatchingPassword())){
+    public String register(@ModelAttribute("user")UserRegistrationVO userRegistrationVO) throws IOException {
+        if(!userRegistrationVO.getPassword().equals(userRegistrationVO.getMatchingPassword())){
             return "error";
         }
 
-        String user = userFacade.registerUser(userDTO);
+        UserDTO userDTO = new UserDTO();
+        userDTO.setEmail(userRegistrationVO.getEmail());
+        userDTO.setPassword(userRegistrationVO.getPassword());
+        userDTO.setUsername(userRegistrationVO.getUsername());
+
+        UserDTO user = userFacade.registerUser(userDTO);
 
         try {
+
             if (user.equals("success")) {
                 return "/login";
             } else {
-                log.error("APP-100-300", userDTO.getEmail());
+                log.error("APP-100-300", userRegistrationVO.getEmail());
                 return "error";
             }
+
         } catch (Exception e) {
             return e.getMessage();
         }

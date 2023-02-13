@@ -1,5 +1,13 @@
 version: "3"
 services:
+  postgres:
+    image: postgres:15
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_DB=spring_dubbo
+    ports:
+      - "5432:5432"
   zookeeper:
     image: zookeeper:3.8.0
     ports:

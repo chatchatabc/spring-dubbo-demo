@@ -6,6 +6,7 @@ CREATE TABLE if not exists users
     id SERIAL PRIMARY KEY,
     username VARCHAR,
     password VARCHAR,
+    salt VARCHAR,
     email VARCHAR,
     roles VARCHAR,
     dateAt timestamp,
@@ -17,15 +18,19 @@ INSERT INTO users
 (id,
  username,
  password,
+ salt,
  email,
+ roles,
  dateAt,
  lastLogin
 )
 VALUES(
           DEFAULT,
           'admin',
-          '123',
-          'admin@email.com',
+          'd5c398e8b890a14d8c03faa0da1324df9aadd3d3',
+          '18D4D05E',
+          'admin@example.com',
+          'admin',
           localtimestamp,
           localtimestamp
       );
