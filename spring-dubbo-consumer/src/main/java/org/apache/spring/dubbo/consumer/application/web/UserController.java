@@ -1,18 +1,18 @@
 package org.apache.spring.dubbo.consumer.application.web;
 
 import org.apache.dubbo.config.annotation.DubboReference;
-import org.apache.spring.dubbo.consumer.application.common.vo.UserRegistrationVO;
-import org.apache.spring.dubbo.port.UserFacade;
-import org.apache.spring.dubbo.port.dto.UserDTO;
+import org.apache.spring.dubbo.consumer.application.common.vo.UserVO;
 import org.apache.spring.dubbo.consumer.util.error.AppErrorFactory;
 import org.apache.spring.dubbo.consumer.util.error.AppErrorLogger;
+import org.apache.spring.dubbo.port.UserFacade;
+import org.apache.spring.dubbo.port.dto.UserDTO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.reactive.result.view.RedirectView;
+import org.springframework.web.reactive.result.view.Rendering;
+import reactor.core.publisher.Mono;
 
 import java.io.IOException;
 
@@ -25,44 +25,48 @@ public class UserController {
     private static final AppErrorLogger log = AppErrorFactory.getLogger(UserController.class);
 
     @GetMapping("/")
-    public String login(){
-        return "login";
+    public Mono<Rendering> login() {
+        return Mono.just(Rendering.view("login").build());
     }
+    @PostMapping(value = "/login", consumes = "application/x-www-form-urlencoded")
+    public Mono<Rendering> loginUser(UserVO userVO, Model model) {
+        if (userVO.getEmail().isEmpty() || userVO.getPassword().isEmpty()){
+            return Mono.just(Rendering.view("login").build());
+        } else {
+            try {
+                System.out.println(userVO.getEmail());
+                System.out.println(userVO.getPassword());
 
-    @PostMapping("/login")
-    public String loginUser(String email, String password, Model model) {
-        try {
-            System.out.println(email);
-            System.out.println(password);
-            final UserDTO userDTO = userFacade.authUser(email, password);
-            System.out.println(userDTO);
-            if(userDTO.getEmail().isEmpty()){
-                return "login";
+                final UserDTO userDTO = userFacade.authUser(userVO.getEmail(), userVO.getPassword());
+                System.out.println(userDTO);
+                if(userDTO.getEmail().isEmpty()){
+                    return Mono.just(Rendering.view("login").build());
+                }
+                model.addAttribute("user", userDTO);
+                return Mono.just(Rendering.view("homepage").build());
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+                return Mono.just(Rendering.view("error").build());
             }
-            model.addAttribute("user", userDTO);
-            return "homepage";
-        } catch (IOException e) {
-            return e.getMessage();
         }
+
     }
 
     @GetMapping("/register")
-    public String register(Model model){
-        UserDTO userDTO = new UserDTO();
-        model.addAttribute("user", userDTO);
-        return "registration";
+    public Mono<Rendering> register(){
+        return Mono.just(Rendering.view("registration").build());
     }
 
-    @PostMapping("/register")
-    public String register(@ModelAttribute("user")UserRegistrationVO userRegistrationVO) throws IOException {
-        if(!userRegistrationVO.getPassword().equals(userRegistrationVO.getMatchingPassword())){
+    @PostMapping(value = "/register-submit", consumes = "application/x-www-form-urlencoded")
+    public String register(UserVO userVO, Model model) throws IOException {
+        if(!userVO.getPassword().equals(userVO.getMatchingPassword())){
             return "error";
         }
 
         UserDTO userDTO = new UserDTO();
-        userDTO.setEmail(userRegistrationVO.getEmail());
-        userDTO.setPassword(userRegistrationVO.getPassword());
-        userDTO.setUsername(userRegistrationVO.getUsername());
+        userDTO.setEmail(userVO.getEmail());
+        userDTO.setPassword(userVO.getPassword());
+        userDTO.setUsername(userVO.getUsername());
 
         UserDTO user = userFacade.registerUser(userDTO);
 
@@ -71,7 +75,7 @@ public class UserController {
             if (user.equals("success")) {
                 return "/login";
             } else {
-                log.error("APP-100-300", userRegistrationVO.getEmail());
+                log.error("APP-100-300", userVO.getEmail());
                 return "error";
             }
 

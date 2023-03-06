@@ -58,18 +58,21 @@ public class UserFacadeImpl implements UserFacade {
         user.setPassword(codecUtils.hash(userDTO.getPassword(), salt));
         user.setUsername(userDTO.getUsername());
         user.setSalt(salt);
-        if(userSpec.isEmailExist(user.getEmail())){
+        if(!userSpec.isEmailExist(user.getEmail())){
             throw new IOException("User already exists: " + user.getEmail());
         }else{
             UserDTO userDTOReturn = new UserDTO();
             String url = "http://localhost:8090/users";
-            crudHttpService.parseFromGson(crudHttpService.post(url, crudHttpService.parseToGson(user)))
-                   .forEach(result -> {
-                       userDTOReturn.setEmail(result.getEmail());
-                       userDTOReturn.setPassword(result.getPassword());
-                       userDTOReturn.setUsername(result.getUsername());
-                    });
-            return userDTOReturn;
+            if(crudHttpService.post(url, crudHttpService.parseToGson(user)) == 201){
+                userDTOReturn.setSerialVersionUID(user.getId());
+                userDTOReturn.setEmail(user.getEmail());
+                userDTOReturn.setPassword(user.getPassword());
+                userDTOReturn.setUsername(user.getUsername());
+                return userDTOReturn;
+            } else {
+                throw new IOException("Something went wrong");
+            }
+
         }
 
     }

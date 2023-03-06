@@ -5,7 +5,13 @@ GET http://localhost:8090/users
 GET http://localhost:8090/users?email=eq.admin@email.com&password=eq.123
 
 ### post
-POST http://localhost:8090/users
-Content-Type:application/json
+POST http://localhost:8080/register-submit
+Content-Type:application/x-www-form-urlencoded
 
-{"username":"josh","password":"123","email":"josh@email.com","dateat":"2023:01:10: 18::08::23","lastlogin":"2023:01:10: 18::08::23"}
+email=josh@example.com&password=123&username=josh&matchingPassword=123
+
+### do login by post
+POST http://localhost:8080/login
+Content-Type: application/x-www-form-urlencoded
+
+email=admin@email.com&password=123

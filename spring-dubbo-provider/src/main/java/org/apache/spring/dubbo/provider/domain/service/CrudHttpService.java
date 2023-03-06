@@ -6,7 +6,7 @@ import java.util.List;
 public interface CrudHttpService {
     String get(String url) throws IOException;
 
-    String post(String url, String json) throws IOException;
+    Integer post(String url, String json) throws IOException;
 
 //    Response put(String url, RequestBody body) throws IOException;
 

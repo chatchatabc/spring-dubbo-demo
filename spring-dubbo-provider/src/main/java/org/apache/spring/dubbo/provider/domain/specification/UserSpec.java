@@ -6,5 +6,5 @@ public interface UserSpec {
     /**
      * check if user exists
      */
-    Boolean isEmailExist(String email) throws IOException, IOException;
+    Boolean isEmailExist(String email) throws IOException;
 }

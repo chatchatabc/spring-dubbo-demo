@@ -27,14 +27,13 @@ public class CrudHttpServiceImpl implements CrudHttpService {
             if (!response.isSuccessful()) {
                 throw new IOException("Unexpected code " + response);
             }
-            System.out.println(response);
             assert response.body() != null;
             return response.body().string();
         }
     }
 
     @Override
-    public String post(String url, String json) throws IOException {
+    public Integer post(String url, String json) throws IOException {
         RequestBody body = RequestBody.create(json, MediaType.get("application/json; charset=utf-8"));
         Request request = new Request.Builder()
                 .url(url)
@@ -44,7 +43,8 @@ public class CrudHttpServiceImpl implements CrudHttpService {
             if (!response.isSuccessful()) {
                 throw new IOException("Unexpected code " + response);
             }
-            return response.message();
+            System.out.println(response.code());
+            return response.code();
         }
     }
 

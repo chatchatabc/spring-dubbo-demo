@@ -8,13 +8,13 @@
 </head>
 <body>
 <h1>Login</h1>
-<form name='login' class="grid grid-cols-2 w-fit" th:action="@{/login}" method="POST">
+<form name='login' class="grid grid-cols-2 w-fit" th:action="@{/login}" method="post" >
     <label for="email">Email: </label>
     <input type="text" id="email" name="email" />
     <label for="password">Password: </label>
     <input type="password" id="password" name="password" />
     <input id="submit" type="submit" value="submit" />
-    <a href="register"><input style="margin-left: 10px" type="button" value="register" /></a>
+    <a href="/register"><input style="margin-left: 10px" type="button" value="register" /></a>
 </form>
 </body>
 </html>

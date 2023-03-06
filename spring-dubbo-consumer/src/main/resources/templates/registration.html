@@ -1,33 +1,32 @@
 <!DOCTYPE html>
-<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<html lang="en">
+<!--/*@thymesVar id="user" type="org.apache.spring.dubbo.consumer.application.common.vo.UserVO"*/-->
+<!--/*@thymesVar id="error" type="java.lang.String"*/-->
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-<h1>form</h1>
-<form th:action="@{/registration}" th:object="${user}" method="POST" enctype="application/x-www-form-urlencoded">
+<h1>Form</h1>
+<form class="grid grid-cols-2 w-fit" th:action="@{/register-submit}" method="post">
     <div>
         <label for="username">username</label>
-        <input id="username" th:field="*{username}"/>
-        <p th:each="error: ${#fields.hasErrors('username')}"
-           th:text="${error}">Validation error</p>
+        <input id="username" name="username" />
     </div>
     <div>
         <label for="email">email</label>
-        <input id="email" type="email" th:field="*{email}"/>
-        <p th:each="error : ${#fields.hasErrors('email')}"
-           th:text="${error}">Validation error</p>
+        <input id="email" type="email" name="email" />
+
     </div>
     <div>
         <label for="password">password</label>
-        <input id="password" type="password" th:field="*{password}"/>
-        <p th:each="error : ${#fields.hasErrors('password')}"
-           th:text="${error}">Validation error</p>
+        <input id="password" type="password" name="password" />
+
     </div>
     <div>
         <label for="match">confirm</label>
-        <input id="match" type="password" th:field="*{matchingPassword}"/>
+        <input id="match" type="password" name="matchingPassword"/>
     </div>
     <button type="submit">submit</button>
 </form>
