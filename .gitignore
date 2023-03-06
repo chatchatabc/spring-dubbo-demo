@@ -122,7 +122,7 @@ fabric.properties
 
 # Log file
 *.log
-*.log.1
+*.log.*
 /logs
 
 # BlueJ files

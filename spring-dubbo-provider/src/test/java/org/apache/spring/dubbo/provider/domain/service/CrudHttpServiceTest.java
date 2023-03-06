@@ -1,8 +1,8 @@
 package org.apache.spring.dubbo.provider.domain.service;
 
 
-import org.apache.spring.dubbo.port.UserFacade;
-import org.apache.spring.dubbo.port.dto.UserDTO;
+import org.apache.spring.dubbo.facade.UserFacade;
+import org.apache.spring.dubbo.facade.dto.UserDTO;
 import org.apache.spring.dubbo.provider.SpringBootBaseTest;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;

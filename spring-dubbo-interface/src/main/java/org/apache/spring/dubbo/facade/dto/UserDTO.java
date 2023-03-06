@@ -1,4 +1,4 @@
-package org.apache.spring.dubbo.port.dto;
+package org.apache.spring.dubbo.facade.dto;
 
 import lombok.Data;
 

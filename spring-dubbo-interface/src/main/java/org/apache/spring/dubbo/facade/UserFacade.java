@@ -1,6 +1,6 @@
-package org.apache.spring.dubbo.port;
+package org.apache.spring.dubbo.facade;
 
-import org.apache.spring.dubbo.port.dto.UserDTO;
+import org.apache.spring.dubbo.facade.dto.UserDTO;
 
 import java.io.IOException;
 

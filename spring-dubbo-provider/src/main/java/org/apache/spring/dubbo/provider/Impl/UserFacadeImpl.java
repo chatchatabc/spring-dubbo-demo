@@ -1,8 +1,8 @@
 package org.apache.spring.dubbo.provider.Impl;
 
 import org.apache.dubbo.config.annotation.DubboService;
-import org.apache.spring.dubbo.port.UserFacade;
-import org.apache.spring.dubbo.port.dto.UserDTO;
+import org.apache.spring.dubbo.facade.UserFacade;
+import org.apache.spring.dubbo.facade.dto.UserDTO;
 import org.apache.spring.dubbo.provider.domain.model.User;
 import org.apache.spring.dubbo.provider.domain.service.CrudHttpService;
 import org.apache.spring.dubbo.provider.domain.specification.UserSpec;
@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
-import java.util.List;
 
 @SuppressWarnings("SpringJavaAutowiredFieldsWarningInspection")
 @Service
