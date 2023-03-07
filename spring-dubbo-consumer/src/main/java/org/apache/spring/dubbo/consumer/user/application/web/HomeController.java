@@ -1,0 +1,13 @@
+package org.apache.spring.dubbo.consumer.user.application.web;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class HomeController {
+
+    @GetMapping("/home")
+    public String home(){
+        return "homepage";
+    }
+}
